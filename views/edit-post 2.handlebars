@@ -1,0 +1,18 @@
+<h2>Edit Post</h2>
+
+    <form class="edit-post-form p-2">
+    <a href="/dashboard" class="back-link"><i class="fas fa-long-arrow-alt-left"></i> Back to dashboard</a>
+        <div class="mt-1">
+            <label for="post-title" class="d-none">Edit title:</label>
+            <input name="post-title" id="post-title" class="form-input" type="text" value="{{post.title}}" />
+        </div>
+        <div>
+            <label for="post-text" class="d-none">Edit post:</label>
+            <textarea name="post-text" id="post-text" class="form-input" >{{post.text}}</textarea>
+        </div>
+        <button type="submit" class="btn">Save</button>
+        <button type="button" class="delete-post-btn btn">Delete</button>
+    </form>
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>

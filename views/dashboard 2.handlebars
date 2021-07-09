@@ -1,0 +1,33 @@
+<h2>Your Dashboard</h3>
+
+    <form class="new-post-form mb-2 p-2">
+    <h3 class="p-0 pb-2">Create New Post</h3>
+        <div class="form-input flex-column align-start">
+            <label for="post-title">Title</label>
+            <input type="text" id="post-title" name="post-title" />
+        </div>
+        <div class="form-input flex-column align-start">
+            <label for="post-text">Post body</label>
+            <textarea id="post-text" name="post-text">Start writing...</textarea>
+        </div>
+        <button type="submit" class="btn">Post</button>
+    </form>
+
+
+    {{#if posts.length}}
+    <h3>Your Posts</h3>
+    <section>
+        <ol class="flex-row dashboard-posts">
+            {{#each posts as |post|}}
+            <li class="dashboard-post mb-1 mr-1">
+                {{> post-info post}}
+                <a href="/dashboard/edit/{{post.id}}" class="edit-link btn"><i class="fas fa-pencil-alt" alt="Edit Post"></i> Edit</a>
+            </li>
+            {{/each}}
+        </ol>
+    </section>
+    {{else}}
+    <h3>You haven't made any posts yet!</h3>
+    {{/if}}
+
+    <script src='/javascript/add-post.js'></script>
