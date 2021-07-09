@@ -1,0 +1,31 @@
+<div class="row">
+     <div class="col s12">
+          <h2>Edit Blog Entry: </h2>
+     </div>
+</div>
+<div class="row">
+     <div class="col s12 center-align">
+          <p>Blog Title: </p>
+     </div>
+     <div class="input-field col s12">
+          <input id="blog-title" name="blog-title" type="text" value="{{title}}">
+     </div>
+</div>
+<div class="row">
+     <div class="col s12 center-align">
+          <p>Blog Entry: </p>
+     </div>
+     <div class="input-field col s12">
+          <textarea id="blog-text" name="blog-text" class="materialize-textarea">{{content}}</textarea>
+     </div>
+</div>
+<div class="row">
+     <div class="col s3 offset-s9">
+          <button class="btn waves-effect waves-light" id="edit-post-button" value={{id}}>
+               <i class="material-icons left">done</i>Submit Blog
+          </button>
+     </div>
+</div>
+
+
+<script src="/javascript/edit-blog.js"></script>
