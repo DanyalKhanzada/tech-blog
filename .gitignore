@@ -1,5 +1,5 @@
-node_modules
 .DS_Store
+
 .env
 
 # Logs
@@ -106,6 +106,3 @@ dist
 
 # TernJS port file
 .tern-port
-
-#package-lock
-package-lock.json
