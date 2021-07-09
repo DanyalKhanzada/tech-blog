@@ -1,31 +1,18 @@
-<div class="row">
-     <div class="col s12">
-          <h2>Edit Blog Entry: </h2>
-     </div>
-</div>
-<div class="row">
-     <div class="col s12 center-align">
-          <p>Blog Title: </p>
-     </div>
-     <div class="input-field col s12">
-          <input id="blog-title" name="blog-title" type="text" value="{{title}}">
-     </div>
-</div>
-<div class="row">
-     <div class="col s12 center-align">
-          <p>Blog Entry: </p>
-     </div>
-     <div class="input-field col s12">
-          <textarea id="blog-text" name="blog-text" class="materialize-textarea">{{content}}</textarea>
-     </div>
-</div>
-<div class="row">
-     <div class="col s3 offset-s9">
-          <button class="btn waves-effect waves-light" id="edit-post-button" value={{id}}>
-               <i class="material-icons left">done</i>Submit Blog
-          </button>
-     </div>
-</div>
+<h2>Edit Post</h2>
 
+    <form class="edit-post-form p-2">
+    <a href="/dashboard" class="back-link"><i class="fas fa-long-arrow-alt-left"></i> Back to dashboard</a>
+        <div class="mt-1">
+            <label for="post-title" class="d-none">Edit title:</label>
+            <input name="post-title" id="post-title" class="form-input" type="text" value="{{post.title}}" />
+        </div>
+        <div>
+            <label for="post-text" class="d-none">Edit post:</label>
+            <textarea name="post-text" id="post-text" class="form-input" >{{post.text}}</textarea>
+        </div>
+        <button type="submit" class="btn">Save</button>
+        <button type="button" class="delete-post-btn btn">Delete</button>
+    </form>
 
-<script src="/javascript/edit-blog.js"></script>
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>

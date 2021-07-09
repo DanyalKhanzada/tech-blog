@@ -1,22 +1,18 @@
-module.exports = {
-    format_date: date => {
-         return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(date).getFullYear()}`;
-    },
+const format_date = (date) => {
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
-    format_plural: (word, amount) => {
-         if (amount !== 1) {
-              return `${word}s`;
-         }
+    const formattedMonth = months[date.getMonth()];
 
-         return word;
-    },
+    return `${date.getDate()} ${formattedMonth} ${date.getFullYear()}`
+};
 
-    format_url: url => {
-         return url
-         .replace('http://', '')
-         .replace('https://', '')
-         .replace('www.', '')
-         .split('/')[0]
-         .split('?')[0]
-    },
-}
+const format_plural = (string, num) => {
+    if (num === 1) {
+        return string;
+    }
+    else {
+        return `${string}s`;
+    };
+};
+
+module.exports = { format_date, format_plural };

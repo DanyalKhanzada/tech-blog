@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <title>Danny's Tech Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/715d22d8c7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Tech Blog</title>
 </head>
-
 <body>
-     <header>
-          <nav>
-               <div class="nav-wrapper">
-                    <a href="/" class="brand-logo">Danny's Tech Blog</a>
-                    <ul id="nav-mobile" class="right orange-lighten-1">
-                         {{#if loggedIn}}
-                         <li><a href="/dashboard">Dashboard</a></li>
-                         <li><a id="logout">Logout</a></li>
-                         {{/if}}
-                         {{#unless loggedIn}}
-                         <li><a href="/login">Login</a></li>
-                         <li><a href="/register">Register</a></li>
-                         {{/unless}}
-                    </ul>
-               </div>
-          </nav>
-     </header>
-     <main>
-          <div class="container">
-               {{{ body }}}
-          </div>
-     </main>
-     <footer>
 
-     </footer>
-
-</body>
+    <header class="flex-row align-center justify-between p-2">
+        <div class="heading-wrapper">
+        <a href="/">
+        <h1 class="">
+            Tech Blog
+        </h1>
+        </a>
+        <h4>Tech minds think alike.</h4>
+        </div>
+        <nav class="flex-col-xs">
+            {{#if loggedIn}}
+            <a href="/dashboard" class="nav-link">dashboard</a>
+            <button id="logout" class="nav-link nav-button">logout</button>
+            {{else}}
+            <a href="/login" class="nav-link nav-button">login</a>
+            <a href="login" class="btn">Sign up</a>
+            {{/if}}
+        </nav>
+    </header>
+    <main>
+        {{{ body }}}
+    </main>
 
 {{#if loggedIn}}
-<script src="/javascript/logout.js"></script>
+<script src='/javascript/logout.js'></script>
 {{/if}}
 
+</body>
 </html>

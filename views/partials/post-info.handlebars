@@ -1,0 +1,12 @@
+<article class="post p-1">
+    <div class="post-title mb-1">
+        <a href="/post/{{id}}" target="_blank" class="title-link">{{title}}</a>
+    </div>
+    <div class="post-body">
+        <p class="post-text mb-1">{{text}}</p>
+        <div class="meta">
+            By {{user.username}} {{#if post.byUser}} (You!) {{/if}}▪ {{format_date created_at}} ▪
+            <a href="/post/{{id}}" class="comment-link">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+        </div>
+    </div>
+</article>

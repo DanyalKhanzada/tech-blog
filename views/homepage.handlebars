@@ -1,25 +1,11 @@
-<div class="row center-align">
-     <div class="col s12">
-         <h2>Welcome to the blog!</h2> 
-     </div>
-     <div class="col s12">
-          <h3>Hot Posts: </h3>  
-     </div>    
-</div>
-<div class="row">
-     {{#each posts}}
-     <div class="col s12">
-          <div class="card horizontal">
-               <div class="card-stacked">
-                    <div class="card-content">
-                         <p class="flow-text">{{title}}</p>
-                    </div>
-                    <div class="card-action">
-                         <p>By {{user.username}} on {{format_date created_at}}</p>
-                         <a href="/posts/{{id}}">View Full Post</a>
-                    </div>
-               </div>
-          </div>
-     </div>
-     {{/each}}
-</div>
+{{#if posts.length}}
+<ul class="post-list flex-column">
+    {{#each posts as |post|}}
+    <li class="post-list-item">
+        {{> post-info post}}
+    </li>
+    {{/each}}
+</ul>
+{{else}}
+<h2>There are no posts yet! Why don't you <a href="/dashboard" class="no-posts">write one</a>?</h2>
+{{/if}}

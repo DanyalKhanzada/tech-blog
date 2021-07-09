@@ -1,30 +1,33 @@
-<div class="row center-align">
-     <div class="col s6 offset-s3">
-          <button class="btn waves-effect waves-light" id="new-post-button">
-               <i class="material-icons left">note add</i>New Blog Post
-          </button>
-     </div>
-</div>
-<h4>Your Posts: </h4>
-<div class="row">
-     {{#each post}}
-     <div class="col s12">
-          <div class="card horizontal">
-               <div class="card-stacked">
-                    <div class="card-content">
-                         <p class="flow-text">{{title}}</p>
-                    </div>
-                    <div class="card-action">
-                         <p>By {{user.username}} on {{format_date created_at}}</p>
-                         <a href="/posts/{{id}}">View Full Post</a>
-                         <a href="/posts/edit/{{id}}">Edit Post</a>
-                         <a id="delete-post-button" value={{id}}>Delete Post</a>
-                    </div>
-               </div>
-          </div>
-     </div>
-     {{/each}}
-</div>
+<h2>Your Dashboard</h3>
+
+    <form class="new-post-form mb-2 p-2">
+    <h3 class="p-0 pb-2">Create New Post</h3>
+        <div class="form-input flex-column align-start">
+            <label for="post-title">Title</label>
+            <input type="text" id="post-title" name="post-title" />
+        </div>
+        <div class="form-input flex-column align-start">
+            <label for="post-text">Post body</label>
+            <textarea id="post-text" name="post-text">Start writing...</textarea>
+        </div>
+        <button type="submit" class="btn">Post</button>
+    </form>
 
 
-<script src="/javascript/dashboard.js"></script>
+    {{#if posts.length}}
+    <h3>Your Posts</h3>
+    <section>
+        <ol class="flex-row dashboard-posts">
+            {{#each posts as |post|}}
+            <li class="dashboard-post mb-1 mr-1">
+                {{> post-info post}}
+                <a href="/dashboard/edit/{{post.id}}" class="edit-link btn"><i class="fas fa-pencil-alt" alt="Edit Post"></i> Edit</a>
+            </li>
+            {{/each}}
+        </ol>
+    </section>
+    {{else}}
+    <h3>You haven't made any posts yet!</h3>
+    {{/if}}
+
+    <script src='/javascript/add-post.js'></script>
