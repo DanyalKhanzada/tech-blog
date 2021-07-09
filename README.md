@@ -27,7 +27,7 @@ The app can be found [here](https://dashboard.heroku.com/apps/lit-dawn-38821/dep
 - Heroku
 
 ## Questions
-For additional questions, contact Amelia:
+For additional questions, contact Danyal Khanzada:
 
 GitHub: [DanyalKhanzada
 ](https://github.com/DanyalKhanzada)
