@@ -6,16 +6,16 @@
 }
 
 :root {
-    --yellow: #e09f3e;
+    --forest-green: #228b22;
     --white: #f2f2f2;
-    --purple: #694a68;
-    --lightPurple: #80597e;
+    --pink: #8b2257;
+    --lightPurple: #57228b;
     --smallSpacer: 10px;
     --bigSpacer: 20px;
 }
 
 body {
-    background: var(--yellow);
+    background: var(--forest-green);
     font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -43,7 +43,7 @@ header {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Averia Serif Libre', cursive;
+    font-family: 'Helvetica', cursive;
     color: var(--white);
 }
 
@@ -66,7 +66,7 @@ h4 {
 
 h2, h3 {
     padding: var(--bigSpacer);
-    color: var(--purple);
+    color: var(--pink);
 }
 
 /* links and buttons */
@@ -80,7 +80,7 @@ a, a:visited, a:hover {
 }
 
 .title-link:hover, .comment-link:hover {
-    color: var(--purple);
+    color: var(--pink);
 }
 
 .nav-link {
@@ -88,7 +88,7 @@ a, a:visited, a:hover {
 }
 
 .nav-link:hover {
-    color: var(--purple);
+    color: var(--pink);
 }
 
 a, button {
@@ -106,7 +106,7 @@ button:hover {
 }
 
 .btn {
-    background: var(--purple);
+    background: var(--pink);
     padding: var(--smallSpacer);
     border-radius: var(--smallSpacer);
     border: none;
@@ -125,7 +125,7 @@ button:hover {
 }
                         
 .back-link {
-    color: var(--purple);
+    color: var(--pink);
 }
 
 .back-link:hover {
@@ -134,7 +134,7 @@ button:hover {
 
 .edit-link {
     display: block;
-    background: var(--purple);
+    background: var(--pink);
     width: 100%;
     margin: 0;
     box-shadow: none;
@@ -143,7 +143,7 @@ button:hover {
 }
 
 .no-posts {
-    color: var(--yellow);
+    color: var(--forest-green);
 }
 
 .no-posts:hover {
@@ -221,15 +221,15 @@ button:hover {
 }
 
 .post-title {
-    font-family: 'Averia Serif Libre', cursive;
-    color: var(--purple);
+    font-family: 'Helvetica', cursive;
+    color: var(--pink);
     font-weight: bold;
     font-size: 24px;
 }
 
 .post-list-item {
     width: 100%;
-    border-bottom: 1px solid var(--purple);
+    border-bottom: 1px solid var(--pink);
 }
 
 .post-list-item:last-child {
@@ -247,7 +247,7 @@ button:hover {
 }
 
 .dashboard-post {
-    border: 1px solid var(--purple);
+    border: 1px solid var(--pink);
     width: 200px;
     height: max-content;
     display: inline-block;
@@ -287,7 +287,7 @@ button:hover {
 label {
     font-size: 12px;
     font-style: italic;
-    color: var(--purple);
+    color: var(--pink);
 }
 
 .new-post-form {
